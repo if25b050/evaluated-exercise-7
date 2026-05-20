@@ -1,4 +1,4 @@
-import { isValidEmail } from './isValidEmail';
+import { isValidEmail } from "./isValidEmail";
 import { expect, test } from '@jest/globals';
 
 test('isValidEmail returns true for valid email addresses', () => {
