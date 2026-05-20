@@ -6,6 +6,7 @@
   "scripts": {
     "build": "dotenv -e .env -- tsc -p tsconfig.json",
     "start": "dotenv -e .env -- node ./dist/index.js",
+    "test": "jest",
     "migrate": "dotenv -e .env -- npx prisma migrate deploy",
     "prisma:generate": "dotenv -e .env -- npx prisma generate",
     "cleanup:dev": "npx rimraf dist && npx rimraf node_modules && npm install",
@@ -26,10 +27,12 @@
     "fastify": "^5.2.1"
   },
   "devDependencies": {
+    "@jest/globals": "^30.4.1",
     "@types/node": "^22.13.4",
     "dotenv-cli": "^8.0.0",
     "nodemon": "^3.1.9",
     "prisma": "^6.4.0",
+    "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }
