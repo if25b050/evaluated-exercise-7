@@ -38,3 +38,14 @@ services:
       options:
         max-size: '10m'
         max-file: '3'
+  sonarqube:
+    image: sonarqube:9.9.8-community
+    ports:
+      - "127.0.0.1:9000:9000"
+    env_file:
+      - .env
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+        max-file: '3'
